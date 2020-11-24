@@ -40,7 +40,7 @@ else
     echo "Keycloak from [download]: $KEYCLOAK_DIST"
 
     cd /opt/jboss/
-    curl -L $KEYCLOAK_DIST | tar zx
+    curl -k -L $KEYCLOAK_DIST | tar zx
     mv /opt/jboss/keycloak-?.?.?* /opt/jboss/keycloak
 fi
 
@@ -69,7 +69,7 @@ cp /opt/jboss/tools/databases/oracle/module.xml .
 
 mkdir -p /opt/jboss/keycloak/modules/system/layers/keycloak/com/microsoft/sqlserver/jdbc/main
 cd /opt/jboss/keycloak/modules/system/layers/keycloak/com/microsoft/sqlserver/jdbc/main
-curl -L http://central.maven.org/maven2/com/microsoft/sqlserver/mssql-jdbc/$JDBC_MSSQL_VERSION/mssql-jdbc-$JDBC_MSSQL_VERSION.jar > mssql-jdbc.jar
+curl -L http://repo1.maven.org/maven2/com/microsoft/sqlserver/mssql-jdbc/$JDBC_MSSQL_VERSION/mssql-jdbc-$JDBC_MSSQL_VERSION.jar > mssql-jdbc.jar
 cp /opt/jboss/tools/databases/mssql/module.xml .
 
 ######################
