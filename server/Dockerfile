@@ -11,9 +11,9 @@ ENV PROXY_ADDRESS_FORWARDING false
 ENV JBOSS_HOME /opt/jboss/keycloak
 ENV LANG en_US.UTF-8
 
-ARG GIT_REPO
-ARG GIT_BRANCH
-ARG KEYCLOAK_DIST=https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-$KEYCLOAK_VERSION.tar.gz
+ARG GIT_REPO=squarescale/keycloak
+ARG GIT_BRANCH=customized-v8.0.2
+ARG KEYCLOAK_DIST
 
 USER root
 
